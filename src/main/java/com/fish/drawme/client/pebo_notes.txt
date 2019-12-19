@@ -1,0 +1,10 @@
+*Fixa Dynamic resize istället för en fixed size på canvas.
+Resizing av window kan lyssnas till m.h.a:
+https://stackoverflow.com/questions/38216268/how-to-listen-resize-event-of-stage-in-javafx
+
+
+* Replaced the JSON dependency with Googles Simple JSON library.
+    The other JSON library did not work for me.
+* Added javafx library to my global intelij library according to:
+    https://www.youtube.com/watch?v=82QcFSstJs0
+*
