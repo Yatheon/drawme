@@ -1,3 +1,5 @@
+
+
 *Fixa Dynamic resize istället för en fixed size på canvas.
 Resizing av window kan lyssnas till m.h.a:
 https://stackoverflow.com/questions/38216268/how-to-listen-resize-event-of-stage-in-javafx
