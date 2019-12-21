@@ -2,6 +2,8 @@ package com.fish.drawme.server.controller;
 
 import com.fish.drawme.common.Client;
 import com.fish.drawme.common.Server;
+import com.fish.drawme.server.model.User;
+import com.fish.drawme.server.model.UserHandler;
 import org.json.simple.JSONObject;
 
 import java.rmi.RemoteException;
@@ -12,28 +14,35 @@ import java.util.Iterator;
 import java.util.UUID;
 
 public class Controller extends UnicastRemoteObject implements Server {
-    private HashMap<String,Client> activeClients = new HashMap<String,Client>();
+    final UserHandler userHandler = new UserHandler();
     public Controller() throws RemoteException {
     }
 
-    @Override
-    public void broadcastDrawing(String clientID, JSONObject data) throws RemoteException {
-        for(HashMap.Entry<String,Client> client:activeClients.entrySet()){
-            if(!client.getKey().equals(clientID)){
-                client.getValue().receiveDrawingBroadcast(data);
-            }
+
+    public JSONObject connect(Client client, JSONObject canvasID)throws RemoteException{
+        try {
+            return userHandler.joinCanvas(client, canvasID);
+        }
+        catch (NoSuchFieldException nsfe){
+            throw new RemoteException();
         }
     }
-    @Override
-    public String connect(Client client) throws RemoteException {
-        String uniqueID = UUID.randomUUID().toString();
-        activeClients.put(uniqueID,client);
-        System.out.println(uniqueID + " joined the canvas");
-        return uniqueID;
+    public JSONObject newCanvas(Client client) throws RemoteException{
+
     }
-    @Override
-    public void disconnect(String uniqueID) throws RemoteException {
-        activeClients.remove(uniqueID);
-        System.out.println(uniqueID + " left the canvas");
+    public void draw(String token, JSONObject cord) throws RemoteException{
+
+    }
+    public void changeColour(String token, JSONObject rgb) throws RemoteException{
+
+    }
+    public void changeSize(String token, JSONObject size) throws RemoteException{
+
+    }
+    public void removeCanvas(JSONObject canvasID) throws RemoteException{
+
+    }
+    public void disconnect(String token) throws RemoteException{
+
     }
 }
