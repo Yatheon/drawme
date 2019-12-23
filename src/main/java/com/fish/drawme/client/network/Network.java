@@ -52,7 +52,10 @@ public class Network extends UnicastRemoteObject implements Client {
         try{
             server = (Server) Naming.lookup(
                     "//" + SERVER_HOST_ADDRESS + "/" + SERVER_NAME_IN_REGISTRY);
-            clientID = server.connect(this);
+
+            JSONObject fish = new JSONObject();
+            JSONObject clientidentity;
+            clientidentity = server.connect(this, fish );
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -72,7 +75,7 @@ public class Network extends UnicastRemoteObject implements Client {
     //Here we tell the server that we drew something
     public void broadcastDrawing(JSONObject data){
         try{
-            server.broadcastDrawing(clientID, data);
+            server.draw(clientID, data);
         }catch (RemoteException e){
             e.printStackTrace();
         }
