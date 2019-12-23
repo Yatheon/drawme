@@ -25,10 +25,10 @@ public interface Server extends Remote {
     /**
      * Sends a x,y coordinate to the server which will be saved and broadcasted
      * to other clients connected on the same canvas
-     * @param cord  token received when doing connect or newCanvas and x,y coordinates in a JSONObject
+     * @param figure JSON object with a figure and cords
      * @throws RemoteException Not yet defined
      */
-    void draw(JSONObject cord) throws RemoteException;
+    void draw(String token, JSONObject figure) throws RemoteException;
     /**
      * This one might cause problems if you remove
      * a canvas that is in use!

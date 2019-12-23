@@ -5,6 +5,7 @@ import com.fish.drawme.common.Client;
 import org.json.simple.JSONObject;
 
 import java.rmi.NoSuchObjectException;
+import java.rmi.RemoteException;
 import java.util.*;
 
 
@@ -22,7 +23,7 @@ public class UserHandler {
      * @param client Client object with broadcast interface
      * @param canvasID Canvas that user wants to join
      * @return JSONObject with user token and canvas object
-     * @throws NoSuchFieldException will throw exception if no canvas with provided ID exists
+     * @throws NoSuchObjectException will throw exception if no canvas with provided ID exists
      */
     public synchronized JSONObject joinCanvas(Client client, String canvasID)throws NoSuchObjectException{
         try{
@@ -65,6 +66,21 @@ public class UserHandler {
             canvasIDToCanvas.remove(canvasID);
         }
         canvasIDToUsers.put(canvasID,users);
+    }
+    public void draw(String token, JSONObject figure){
+        broadcastFigure(token, figure);
+        canvasIDToCanvas.get(userToCanvasID.get(token)).addFigure(figure);
+    }
+    private void broadcastFigure(String token, JSONObject figure){
+        Map<String, User> users = canvasIDToUsers.get(userToCanvasID);
+
+        for(Map.Entry<String, User> user : users.entrySet()){
+            try {
+                user.getValue().sendFigure(figure);
+            }catch (RemoteException re){
+                disconnect(user.getKey());
+            }
+        }
     }
 
 }

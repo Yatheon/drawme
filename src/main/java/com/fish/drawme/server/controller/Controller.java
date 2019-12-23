@@ -31,8 +31,8 @@ public class Controller extends UnicastRemoteObject implements Server {
     public JSONObject connect(Client client) throws RemoteException{
         return userHandler.newCanvas(client);
     }
-    public void draw(JSONObject cord) throws RemoteException{
-
+    public void draw(String token, JSONObject figure) throws RemoteException{
+        userHandler.draw(token, figure);
     }
     public void removeCanvas(String canvasID) throws RemoteException{
 

@@ -36,4 +36,7 @@ public class Canvas {
     public void saveCanvas(){
 
     }
+    public void addFigure(JSONObject figure){
+
+    }
 }
