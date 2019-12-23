@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af12fb7e-4268-4282-939f-7b19c5861298" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fish/drawme/server/db/Canvas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fish/drawme/server/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fish/drawme/server/model/UserHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fish/drawme/common/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fish/drawme/common/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fish/drawme/server/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fish/drawme/server/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fish/drawme/server/start/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fish/drawme/server/start/Start.java" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,6 +27,91 @@
     <expand />
     <select />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fish/drawme/client/startup/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fish/drawme/client/controller/MenuController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fish/drawme/client/controller/CanvasController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fish/drawme/server/start/Start.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fish/drawme/server/model/UserHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fish/drawme/server/model/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fish/drawme/client/network/Network.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -41,6 +124,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/fish/drawme/server/start/Start.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="dqLzsGSa" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -48,8 +141,173 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="2051" />
+    <option name="y" value="11" />
+    <option name="width" value="1616" />
+    <option name="height" value="1006" />
+  </component>
   <component name="ProjectId" id="1V6vDhvRhDufzULe3s4uilbbIcC" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="drawme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="drawme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="drawme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="drawme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="drawme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="drawme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="drawme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="drawme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="network" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="drawme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="startup" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="drawme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="drawme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="drawme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="drawme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="drawme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="drawme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="start" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="drawme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="startup" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="drawme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drawme" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -80,6 +338,18 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java/com/fish/drawme/client/view" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -145,6 +415,38 @@
     </task>
     <servers />
   </component>
+  <component name="ToolWindowManager">
+    <frame x="1912" y="-8" width="1874" height="1096" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25248072" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Cargo" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+    </layout>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -154,71 +456,200 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="98" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576839399851">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="98" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1576839399851" />
-    <state x="448" y="111" width="374" height="570" key="#com.intellij.ide.util.MemberChooser" timestamp="1576841841325">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="448" y="111" width="374" height="570" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1576841841325" />
-    <state x="324" y="445" width="301" height="223" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576938633478">
-      <screen x="0" y="27" width="1920" height="1053" />
-    </state>
-    <state x="324" y="445" width="301" height="223" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1576938633478" />
-    <state x="608" y="314" width="637" height="355" key="FileChooserDialogImpl" timestamp="1576938658797">
-      <screen x="0" y="27" width="1920" height="1053" />
-    </state>
-    <state x="405" y="207" width="637" height="355" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1576691207660" />
-    <state x="608" y="314" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1576938658797" />
-    <state width="1238" height="187" key="GridCell.Tab.0.bottom" timestamp="1576844746937">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state width="1238" height="184" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1576695329396" />
-    <state width="1238" height="187" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1576844746937" />
-    <state width="1238" height="187" key="GridCell.Tab.0.center" timestamp="1576844746937">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state width="1238" height="184" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1576695329396" />
-    <state width="1238" height="187" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1576844746937" />
-    <state width="1238" height="187" key="GridCell.Tab.0.left" timestamp="1576844746936">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state width="1238" height="184" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1576695329395" />
-    <state width="1238" height="187" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1576844746936" />
-    <state width="1238" height="187" key="GridCell.Tab.0.right" timestamp="1576844746937">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state width="1238" height="184" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1576695329396" />
-    <state width="1238" height="187" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1576844746937" />
-    <state x="123" y="0" width="1024" height="795" key="SettingsEditor" timestamp="1576752382527">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="123" y="0" width="1024" height="755" key="SettingsEditor/0.0.1280.760@0.0.1280.760" timestamp="1576682036573" />
-    <state x="123" y="0" width="1024" height="795" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1576752382527" />
-    <state x="293" y="17" width="683" height="759" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1576837097627">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="293" y="17" width="683" height="759" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.800@0.0.1280.800" timestamp="1576837097627" />
-    <state x="49" y="4" width="1171" height="748" key="new project wizard" timestamp="1576609544348">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state x="49" y="4" width="1171" height="748" key="new project wizard/0.0.1280.760@0.0.1280.760" timestamp="1576609544348" />
-    <state x="304" y="178" key="run.anything.popup" timestamp="1576779407934">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="304" y="178" key="run.anything.popup/0.0.1280.800@0.0.1280.800" timestamp="1576779407934" />
-    <state x="303" y="121" width="672" height="678" key="search.everywhere.popup" timestamp="1576844591319">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="303" y="121" width="672" height="678" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1576844591319" />
+    <state x="98" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
+    <state x="98" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" />
+    <state x="448" y="111" width="374" height="570" key="#com.intellij.ide.util.MemberChooser" />
+    <state x="448" y="111" width="374" height="570" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" />
+    <state x="324" y="445" width="301" height="223" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" />
+    <state x="324" y="445" width="301" height="223" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.27.1920.1053@0.27.1920.1053" />
+    <state x="608" y="314" width="637" height="355" key="FileChooserDialogImpl" />
+    <state x="405" y="207" width="637" height="355" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" />
+    <state x="608" y="314" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" />
+    <state width="1238" height="187" key="GridCell.Tab.0.bottom" />
+    <state width="1238" height="184" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" />
+    <state width="1238" height="187" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" />
+    <state width="1238" height="187" key="GridCell.Tab.0.center" />
+    <state width="1238" height="184" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" />
+    <state width="1238" height="187" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" />
+    <state width="1238" height="187" key="GridCell.Tab.0.left" />
+    <state width="1238" height="184" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" />
+    <state width="1238" height="187" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" />
+    <state width="1238" height="187" key="GridCell.Tab.0.right" />
+    <state width="1238" height="184" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" />
+    <state width="1238" height="187" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" />
+    <state x="123" y="0" width="1024" height="795" key="SettingsEditor" />
+    <state x="123" y="0" width="1024" height="755" key="SettingsEditor/0.0.1280.760@0.0.1280.760" />
+    <state x="123" y="0" width="1024" height="795" key="SettingsEditor/0.0.1280.800@0.0.1280.800" />
+    <state x="293" y="17" width="683" height="759" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" />
+    <state x="293" y="17" width="683" height="759" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.800@0.0.1280.800" />
+    <state x="49" y="4" width="1171" height="748" key="new project wizard" />
+    <state x="49" y="4" width="1171" height="748" key="new project wizard/0.0.1280.760@0.0.1280.760" />
+    <state x="304" y="178" key="run.anything.popup" />
+    <state x="304" y="178" key="run.anything.popup/0.0.1280.800@0.0.1280.800" />
+    <state x="303" y="121" width="672" height="678" key="search.everywhere.popup" />
+    <state x="303" y="121" width="672" height="678" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fish/drawme/client/startup/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fish/drawme/client/controller/MenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fish/drawme/client/controller/CanvasController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fish/drawme/server/model/UserHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fish/drawme/client/network/Network.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fish/drawme/server/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fish/drawme/server/start/Start.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>javafx-swt</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
