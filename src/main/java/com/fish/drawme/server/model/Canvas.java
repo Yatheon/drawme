@@ -1,42 +1,36 @@
 package com.fish.drawme.server.model;
 
-import com.fish.drawme.server.model.User;
-import org.bson.Document;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
-import java.rmi.NoSuchObjectException;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+import java.util.Iterator;
+
 
 public class Canvas {
 
-    private final Map<String, Document> canvases = Collections.synchronizedMap(new HashMap<>());
-    private Document canvas;
+    private JSONArray figures;
 
-    public Canvas(String canvasID)throws NoSuchObjectException{
+    private String canvasID;
 
-    }
-
-    public void removeCanvas(){
-
+    public Canvas(JSONObject canvas){
+        canvasID = (String)canvas.get("canvasID");
+        JSONArray fig = (JSONArray) canvas.get("figures");
+        Iterator<String> iterator = fig.iterator();
+        while (iterator.hasNext()) {
+            figures.add(iterator.next());
+        }
     }
     public JSONObject toJSON(){
-        JSONParser parser = new JSONParser();
-       try {
-           JSONObject jsonObject = (JSONObject) parser.parse(canvas.toJson());
-           return jsonObject;
-       }catch (ParseException pe){
-           pe.printStackTrace();
-           return null;
-       }
-    }
-    public void saveCanvas(){
-
+        JSONObject obj = new JSONObject();
+        obj.put("canvasID", canvasID);
+        obj.put("figures", figures);
+        return obj;
     }
     public void addFigure(JSONObject figure){
-
+        figures.add(figure);
+    }
+    public String getCanvasID() {
+        return canvasID;
     }
 }

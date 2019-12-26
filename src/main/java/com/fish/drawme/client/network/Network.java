@@ -53,9 +53,9 @@ public class Network extends UnicastRemoteObject implements Client {
             server = (Server) Naming.lookup(
                     "//" + SERVER_HOST_ADDRESS + "/" + SERVER_NAME_IN_REGISTRY);
 
-            JSONObject fish = new JSONObject();
+
             JSONObject clientidentity;
-            clientidentity = server.connect(this, fish );
+            clientidentity = server.connect(this, "555");
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -90,5 +90,10 @@ public class Network extends UnicastRemoteObject implements Client {
     //Here we set the controller so that Network can communicate with the CanvasController
     public void setController(CanvasController controller){
         this.controller = controller;
+    }
+
+    @Override
+    public void ping() throws RemoteException {
+
     }
 }
