@@ -15,11 +15,7 @@ public class Canvas {
 
     public Canvas(JSONObject canvas){
         canvasID = (String)canvas.get("canvasID");
-        JSONArray fig = (JSONArray) canvas.get("figures");
-        Iterator<String> iterator = fig.iterator();
-        while (iterator.hasNext()) {
-            figures.add(iterator.next());
-        }
+        figures = new JSONArray();
     }
     public JSONObject toJSON(){
         JSONObject obj = new JSONObject();

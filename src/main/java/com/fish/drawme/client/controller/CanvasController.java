@@ -54,11 +54,6 @@ public class CanvasController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         System.out.println("Canvas is now loaded!");
-
-        Random random = new Random();
-        id = "#"+String.format("%05d", random.nextInt(100000));
-        canvasID.setText("ID: "+id);
-
         brushTool = canvas.getGraphicsContext2D();
         canvas.setOnMouseDragged(e->draw(e));
 
@@ -67,6 +62,7 @@ public class CanvasController implements Initializable {
     public void initiateCanvas(){
         canvas.getScene().widthProperty().addListener(evt -> extendCanvas());
         canvas.getScene().heightProperty().addListener(evt -> extendCanvas());
+
     }
     //This method makes the canvas resize with window resizing.
     private void extendCanvas() {
@@ -91,6 +87,7 @@ public class CanvasController implements Initializable {
             data.put("y",y);
             data.put("size",size);
             data.put("color",""+color.getValue());
+
             //Broadcast the drawing to the server via the client(Network) object
             client.broadcastDrawing(data);
         }
@@ -100,6 +97,7 @@ public class CanvasController implements Initializable {
     private void exitCanvas(ActionEvent event){
         System.out.println("Exiting Canvas");
         //Remove the controller object from the client(Network).
+        client.leaveCanvas();
         client.setController(null);
         try{
             //load the menu.fxml
@@ -137,6 +135,8 @@ public class CanvasController implements Initializable {
     public void setClient(Network client){
         this.client = client;
         client.setController(this);
+        id = client.getCanvasID();
+        canvasID.setText("ID: "+id);
     }
     /*
     Is called when the client receives a drawing broadcast from another client

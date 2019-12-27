@@ -10,8 +10,8 @@
    <children>
       <Pane fx:id="menuPane" layoutX="200.0" layoutY="33.0" prefHeight="346.0" prefWidth="200.0">
          <children>
-            <TextField layoutX="14.0" layoutY="147.0" promptText="Canvas ID" />
-            <Button layoutX="140.0" layoutY="179.0" mnemonicParsing="false" text="Join" />
+            <TextField fx:id="canvasIDField" layoutX="14.0" layoutY="147.0" promptText="Canvas ID" />
+            <Button layoutX="140.0" layoutY="179.0" mnemonicParsing="false" onAction="#joinCanvas" text="Join" />
             <Button layoutX="15.0" layoutY="255.0" mnemonicParsing="false" onAction="#createNewCanvas" prefHeight="26.0" prefWidth="170.0" text="Create New Canvas" />
             <Text layoutX="39.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DrawMe">
                <font>
