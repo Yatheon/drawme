@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af12fb7e-4268-4282-939f-7b19c5861298" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fish/drawme/client/network/Network.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fish/drawme/common/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fish/drawme/common/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fish/drawme/common/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fish/drawme/server/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fish/drawme/client/controller/CanvasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fish/drawme/client/controller/CanvasController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fish/drawme/client/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fish/drawme/client/controller/MenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fish/drawme/client/pebo_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fish/drawme/client/pebo_notes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fish/drawme/client/startup/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fish/drawme/client/startup/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fish/drawme/server/start/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fish/drawme/server/startup/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fish/drawme/server/start/Start.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fish/drawme/common/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fish/drawme/common/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/canvas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/canvas.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fish/drawme/client/controller/CanvasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fish/drawme/client/controller/CanvasController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fish/drawme/client/controller/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fish/drawme/client/controller/MenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/canvas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/canvas.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,35 +168,39 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="98" y="57" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1576839399851" />
-    <state x="448" y="111" width="374" height="570" key="#com.intellij.ide.util.MemberChooser" timestamp="1576841841325">
+    <state x="448" y="111" width="374" height="570" key="#com.intellij.ide.util.MemberChooser" timestamp="1576917024591">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="448" y="111" width="374" height="570" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1576841841325" />
+    <state x="448" y="111" width="374" height="570" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1576917024591" />
     <state x="405" y="207" width="637" height="355" key="FileChooserDialogImpl" timestamp="1576691207660">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="405" y="207" width="637" height="355" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1576691207660" />
     <state x="608" y="314" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1576590532571" />
-    <state width="1238" height="187" key="GridCell.Tab.0.bottom" timestamp="1576844746937">
+    <state width="619" height="161" key="GridCell.Tab.0.bottom" timestamp="1577181355464">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
+    <state width="619" height="161" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1576928854086" />
     <state width="1238" height="184" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1576695329396" />
-    <state width="1238" height="187" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1576844746937" />
-    <state width="1238" height="187" key="GridCell.Tab.0.center" timestamp="1576844746937">
+    <state width="619" height="161" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1577181355464" />
+    <state width="619" height="161" key="GridCell.Tab.0.center" timestamp="1577181355463">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
+    <state width="619" height="161" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1576928854086" />
     <state width="1238" height="184" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1576695329396" />
-    <state width="1238" height="187" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1576844746937" />
-    <state width="1238" height="187" key="GridCell.Tab.0.left" timestamp="1576844746936">
+    <state width="619" height="161" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1577181355463" />
+    <state width="619" height="161" key="GridCell.Tab.0.left" timestamp="1577181355463">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
+    <state width="619" height="161" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1576928854085" />
     <state width="1238" height="184" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1576695329395" />
-    <state width="1238" height="187" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1576844746936" />
-    <state width="1238" height="187" key="GridCell.Tab.0.right" timestamp="1576844746937">
+    <state width="619" height="161" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1577181355463" />
+    <state width="619" height="161" key="GridCell.Tab.0.right" timestamp="1577181355464">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
+    <state width="619" height="161" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1576928854086" />
     <state width="1238" height="184" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1576695329396" />
-    <state width="1238" height="187" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1576844746937" />
+    <state width="619" height="161" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1577181355464" />
     <state x="123" y="0" width="1024" height="795" key="SettingsEditor" timestamp="1576752382527">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
