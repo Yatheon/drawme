@@ -1,4 +1,5 @@
-
+*Fixa en Canvas class för Servern. Detta blir ett nytt RMI objekt som hanterar en individuel kanvas
+med en specifik ID.
 
 *Fixa Dynamic resize istället för en fixed size på canvas.
 Resizing av window kan lyssnas till m.h.a:
