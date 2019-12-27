@@ -29,10 +29,10 @@ public class CanvasHandler {
     }
     public Canvas newCanvas(){
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("canvasID", db.getNextID());
-        jsonObject.put("figures", "");
+        String canvasID = db.getNextID();
+        jsonObject.put("canvasID", canvasID);
         Canvas canvas = new Canvas(jsonObject);
-        canvasIDToCanvas.put("canvasID", canvas);
+        canvasIDToCanvas.put(canvasID, canvas);
         db.saveCanvas(jsonObject);
         return canvas;
     }
@@ -43,6 +43,7 @@ public class CanvasHandler {
         canvasIDToCanvas.remove(canvasID);
     }
     public void addFigure(String canvasID, JSONObject figure){
+
         canvasIDToCanvas.get(canvasID).addFigure(figure);
     }
 }

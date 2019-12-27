@@ -40,6 +40,7 @@ public class Controller extends UnicastRemoteObject implements Server {
     public void removeCanvas(String canvasID) throws RemoteException{
 
     }
+    @Override
     public void disconnect(String token) throws RemoteException{
         userHandler.disconnect(token);
     }

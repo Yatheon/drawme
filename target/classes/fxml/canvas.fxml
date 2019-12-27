@@ -8,6 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fish.drawme.client.controller.CanvasController">
    <children>
@@ -19,8 +20,9 @@
                </HBox.margin>
             </Button>
             <ColorPicker fx:id="color" />
-            <TextField fx:id="brushSize" focusTraversable="true" prefHeight="25.0" prefWidth="200.0" visible="true" />
-            <Region prefHeight="200.0" prefWidth="20.0" HBox.hgrow="ALWAYS" />
+            <TextField fx:id="brushSize" focusTraversable="true" prefHeight="25.0" prefWidth="200.0" promptText="Font Size" visible="true" />
+            <Text fx:id="canvasID" fill="#656565" onMouseClicked="#mouseClickedID" onMouseEntered="#mouseEnteredID" onMouseExited="#mouseExitedID" onMousePressed="#mousePressedID" onMouseReleased="#mouseEnteredID" strokeType="OUTSIDE" strokeWidth="0.0" text="ID: #89719" />
+            <Region prefHeight="31.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
             <Button mnemonicParsing="false" onAction="#exitCanvas" text="Leave" />
          </children>
       </HBox>

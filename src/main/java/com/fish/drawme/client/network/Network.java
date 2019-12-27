@@ -21,6 +21,7 @@ import static com.fish.drawme.common.Constants.SERVER_NAME_IN_REGISTRY;
 public class Network extends UnicastRemoteObject implements Client {
     private Server server;
     private String clientID;
+    private String canvasID;
     private CanvasController controller;
     public Network(Stage primaryStage) throws RemoteException{
         connectToServer();
@@ -52,10 +53,6 @@ public class Network extends UnicastRemoteObject implements Client {
         try{
             server = (Server) Naming.lookup(
                     "//" + SERVER_HOST_ADDRESS + "/" + SERVER_NAME_IN_REGISTRY);
-
-
-            JSONObject clientidentity;
-            clientidentity = server.connect(this, "555");
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -66,6 +63,7 @@ public class Network extends UnicastRemoteObject implements Client {
      */
     public void disconnect(){
         try{
+            if(server!=null)
             server.disconnect(clientID);
         }catch (RemoteException e){
             e.printStackTrace();
@@ -76,6 +74,32 @@ public class Network extends UnicastRemoteObject implements Client {
     public void broadcastDrawing(JSONObject data){
         try{
             server.draw(clientID, data);
+        }catch (RemoteException e){
+            e.printStackTrace();
+        }
+    }
+    public void joinCanvas(String canvasID){
+        try{
+            JSONObject serverResponse = server.connect(this, canvasID);
+            clientID = (String)serverResponse.get("clientID");
+            this.canvasID = canvasID;
+
+        }catch (RemoteException e){
+            e.printStackTrace();
+        }
+    }
+    public void createNewCanvas(){
+        try{
+            JSONObject serverResponse = server.connect(this);
+            clientID = (String)serverResponse.get("clientID");
+            canvasID = (String)serverResponse.get("canvasID");
+        }catch (RemoteException e){
+            e.printStackTrace();
+        }
+    }
+    public void leaveCanvas(){
+        try{
+            server.disconnect(clientID);
         }catch (RemoteException e){
             e.printStackTrace();
         }
@@ -95,5 +119,8 @@ public class Network extends UnicastRemoteObject implements Client {
     @Override
     public void ping() throws RemoteException {
 
+    };
+    public String getCanvasID(){
+        return canvasID;
     }
 }

@@ -18,13 +18,19 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.json.simple.JSONObject;
 
 import java.io.IOException;
 import java.net.URL;
 import java.rmi.RemoteException;
+import java.util.Random;
 import java.util.ResourceBundle;
+
+import java.awt.datatransfer.StringSelection;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
 
 public class CanvasController implements Initializable {
     Network client;
@@ -33,9 +39,13 @@ public class CanvasController implements Initializable {
     @FXML
     private TextField brushSize;
     @FXML
+    private Text canvasID;
+    @FXML
     private Canvas canvas;
     @FXML
     private HBox toolbar;
+
+    private String id;
 
     boolean brushSelected = false;
 
@@ -52,6 +62,7 @@ public class CanvasController implements Initializable {
     public void initiateCanvas(){
         canvas.getScene().widthProperty().addListener(evt -> extendCanvas());
         canvas.getScene().heightProperty().addListener(evt -> extendCanvas());
+
     }
     //This method makes the canvas resize with window resizing.
     private void extendCanvas() {
@@ -76,6 +87,7 @@ public class CanvasController implements Initializable {
             data.put("y",y);
             data.put("size",size);
             data.put("color",""+color.getValue());
+
             //Broadcast the drawing to the server via the client(Network) object
             client.broadcastDrawing(data);
         }
@@ -85,6 +97,7 @@ public class CanvasController implements Initializable {
     private void exitCanvas(ActionEvent event){
         System.out.println("Exiting Canvas");
         //Remove the controller object from the client(Network).
+        client.leaveCanvas();
         client.setController(null);
         try{
             //load the menu.fxml
@@ -122,6 +135,8 @@ public class CanvasController implements Initializable {
     public void setClient(Network client){
         this.client = client;
         client.setController(this);
+        id = client.getCanvasID();
+        canvasID.setText("ID: "+id);
     }
     /*
     Is called when the client receives a drawing broadcast from another client
@@ -133,5 +148,27 @@ public class CanvasController implements Initializable {
         //Turn the hexadecimal representation of the color into a Color object
         brushTool.setFill(Color.web((String)data.get("color")));
         brushTool.fillRoundRect(x,y,size,size,size,size);
+    }
+
+    /*
+    Mouse interaction with ID text
+     */
+    @FXML
+    public void mouseEnteredID(MouseEvent event){
+        canvasID.setFill(Color.web("#d6ccc6"));
+    }
+    @FXML
+    public void mouseExitedID(MouseEvent event){
+        canvasID.setFill(Color.web("#656565"));
+    }
+    @FXML
+    public void mouseClickedID(MouseEvent event){
+        StringSelection stringSelection = new StringSelection(id);
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clipboard.setContents(stringSelection, null);
+    }
+    @FXML
+    public void mousePressedID(MouseEvent event){
+        canvasID.setFill(Color.web("#e3e3e3"));
     }
 }

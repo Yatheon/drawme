@@ -13,6 +13,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -23,6 +24,8 @@ import java.util.ResourceBundle;
 
 public class MenuController implements Initializable {
     Network client;
+    @FXML
+    TextField canvasIDField;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         System.out.println("Menu is now loaded!");
@@ -34,6 +37,17 @@ public class MenuController implements Initializable {
     @FXML
     private void createNewCanvas(ActionEvent event){
         System.out.println("Creating new canvas!");
+        client.createNewCanvas();
+        switchToCanvasScene(event);
+    }
+    @FXML
+    private void joinCanvas(ActionEvent event){
+        String canvasID = canvasIDField.getText();
+        System.out.println("Joining canvas "+canvasID);
+        client.joinCanvas(canvasID);
+        switchToCanvasScene(event);
+    }
+    private void switchToCanvasScene(ActionEvent event){
         try{
             //Load the Canvas FXML file from the resources folder.
             FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("fxml/canvas.fxml"));
@@ -49,9 +63,7 @@ public class MenuController implements Initializable {
 
             //Set the client for the CanvasController, so that it can communicate with the server(via the client)
             controller.setClient(client);
-
-
-        }catch (IOException e){
+        }catch (Exception e){
             e.printStackTrace();
         }
     }
