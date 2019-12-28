@@ -78,16 +78,29 @@ public class Network extends UnicastRemoteObject implements Client {
             e.printStackTrace();
         }
     }
-    public void joinCanvas(String canvasID){
+
+    /**
+     * Called when the client joins a existing canvas
+     * @param canvasID, The ID of the canvas that the client wants to join
+     * @return JSONObject containing the canvas paintings.
+     */
+    public JSONObject joinCanvas(String canvasID){
         try{
             JSONObject serverResponse = server.connect(this, canvasID);
+
             clientID = (String)serverResponse.get("clientID");
             this.canvasID = canvasID;
+            return(JSONObject) serverResponse.get("canvas");
 
         }catch (RemoteException e){
-            e.printStackTrace();
+            System.out.println("Canvas does not exist");
+            return null;
         }
     }
+
+    /**
+     * Called when the client creates a new canvas
+     */
     public void createNewCanvas(){
         try{
             JSONObject serverResponse = server.connect(this);
@@ -97,6 +110,10 @@ public class Network extends UnicastRemoteObject implements Client {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Leave the canvas. Tells the server that the client has left the canvas that he was in
+     */
     public void leaveCanvas(){
         try{
             server.disconnect(clientID);
@@ -117,9 +134,10 @@ public class Network extends UnicastRemoteObject implements Client {
     }
 
     @Override
-    public void ping() throws RemoteException {
+    public boolean ping() throws RemoteException {
+        return true;
+    }
 
-    };
     public String getCanvasID(){
         return canvasID;
     }

@@ -20,11 +20,14 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.io.IOException;
 import java.net.URL;
 import java.rmi.RemoteException;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Random;
 import java.util.ResourceBundle;
 
@@ -138,8 +141,10 @@ public class CanvasController implements Initializable {
         id = client.getCanvasID();
         canvasID.setText("ID: "+id);
     }
-    /*
-    Is called when the client receives a drawing broadcast from another client
+
+    /**
+     * Receive a JSONObject containing a figure that the client is to draw on its canvas
+     * @param data, figure that is to be drawn on the client canvas
      */
     public void receiveDrawing(JSONObject data){
         double x = (double) data.get("x");
@@ -148,6 +153,18 @@ public class CanvasController implements Initializable {
         //Turn the hexadecimal representation of the color into a Color object
         brushTool.setFill(Color.web((String)data.get("color")));
         brushTool.fillRoundRect(x,y,size,size,size,size);
+    }
+
+    /**
+     * Is used when joining a preexisting canvas. Paints the client canvas with the figures of the canvas that was joined
+     * @param canvas, contains figures from the canvas that was joined
+     */
+    public void paintCanvas(JSONObject canvas){
+        JSONArray figures = (JSONArray) canvas.get("figures");
+        Iterator<JSONObject> it = figures.iterator();
+        while(it.hasNext()){
+            receiveDrawing(it.next());
+        }
     }
 
     /*

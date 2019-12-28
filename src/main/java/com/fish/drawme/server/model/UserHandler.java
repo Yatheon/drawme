@@ -29,8 +29,11 @@ public class UserHandler {
      */
     public synchronized JSONObject joinCanvas(Client client, String canvasID)throws NoSuchObjectException{
             Canvas canvas = canvasHandler.getCanvas(canvasID);
+            if(canvas==null){
+                System.out.println("HALELULJA");
+                return null;
+            }
             Map<String, User> users = canvasIDToUsers.get(canvasID);
-
             String clientID = UUID.randomUUID().toString();
             userToCanvasID.put(clientID, canvasID);
 
