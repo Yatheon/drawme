@@ -81,8 +81,15 @@ public class MenuController implements Initializable {
 
             //Set the client for the CanvasController, so that it can communicate with the server(via the client)
             controller.setClient(client);
+
+            //We paint the canvas if a canvas was joined
             if(canvas!=null)
             controller.paintCanvas(canvas);
+
+            //We tell the Network object that we are now in the canvas page
+            client.setCanvasBoolean();
+
+
         }catch (Exception e){
             e.printStackTrace();
         }

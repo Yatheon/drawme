@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.Error">
+   <children>
+      <Text layoutX="81.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Connection Error" textAlignment="CENTER" wrappingWidth="421.55859375">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Text>
+      <Text layoutX="146.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Connection with the server was lost. " textAlignment="CENTER" wrappingWidth="291.55859375">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="154.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please restart the application to try to connect to server again or to enter Offline mode" textAlignment="CENTER" wrappingWidth="291.55859375">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

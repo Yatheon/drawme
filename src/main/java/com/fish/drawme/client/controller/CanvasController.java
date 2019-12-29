@@ -23,6 +23,7 @@ import javafx.stage.Stage;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.rmi.RemoteException;
@@ -32,7 +33,6 @@ import java.util.Random;
 import java.util.ResourceBundle;
 
 import java.awt.datatransfer.StringSelection;
-import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 
 public class CanvasController implements Initializable {
@@ -63,21 +63,18 @@ public class CanvasController implements Initializable {
     }
     //Initiation needed to make the canvas resizing work
     public void initiateCanvas(){
-        canvas.getScene().widthProperty().addListener(evt -> extendCanvas());
-        canvas.getScene().heightProperty().addListener(evt -> extendCanvas());
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+
+        canvas.setWidth(screenSize.width);
+        canvas.setHeight(screenSize.height-toolbar.getHeight());
 
     }
-    //This method makes the canvas resize with window resizing.
-    private void extendCanvas() {
-        double width = canvas.getScene().getWidth();
-        double height = canvas.getScene().getHeight();
 
-        canvas.setWidth(width);
-        canvas.setHeight(height-toolbar.getHeight());
-    }
     //Draw function. Used to draw on the canvas when a mouse-drag event happens on it
     private void draw(MouseEvent event){
-        if(brushSelected && !brushSize.getText().isEmpty()){
+        if(brushSelected && isNumber(brushSize.getText())
+){
+
             double size = Double.parseDouble(brushSize.getText());
             double x = event.getX() - size/2;
             double y = event.getY() - size/2;
@@ -95,6 +92,17 @@ public class CanvasController implements Initializable {
             client.broadcastDrawing(data);
         }
     }
+    private boolean isNumber(String str){
+        if (str == null) {
+            return false;
+        }
+        try {
+            double d = Double.parseDouble(str);
+        } catch (NumberFormatException nfe) {
+            return false;
+        }
+        return true;
+    }
     //Used to leave the canvas window. Then the user is redirected to the menu window.
     @FXML
     private void exitCanvas(ActionEvent event){
@@ -102,6 +110,8 @@ public class CanvasController implements Initializable {
         //Remove the controller object from the client(Network).
         client.leaveCanvas();
         client.setController(null);
+        //We let the Network object know that we are leaving the canvas page
+        client.setCanvasBoolean();
         try{
             //load the menu.fxml
             FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("fxml/menu.fxml"));
