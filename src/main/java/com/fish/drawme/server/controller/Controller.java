@@ -2,19 +2,12 @@ package com.fish.drawme.server.controller;
 
 import com.fish.drawme.common.Client;
 import com.fish.drawme.common.Server;
-import com.fish.drawme.server.db.MongoDB;
-import com.fish.drawme.server.model.CanvasHandler;
-import com.fish.drawme.server.model.User;
 import com.fish.drawme.server.model.UserHandler;
 import org.json.simple.JSONObject;
 
 import java.rmi.NoSuchObjectException;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.UUID;
 
 public class Controller extends UnicastRemoteObject implements Server {
     private UserHandler userHandler;

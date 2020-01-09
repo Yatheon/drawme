@@ -1,7 +1,6 @@
 package com.fish.drawme.server.model;
 
 import com.fish.drawme.server.db.MongoDB;
-import org.bson.Document;
 import org.json.simple.JSONObject;
 
 import java.rmi.NoSuchObjectException;
