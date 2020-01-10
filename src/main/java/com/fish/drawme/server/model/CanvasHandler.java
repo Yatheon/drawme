@@ -1,6 +1,7 @@
 package com.fish.drawme.server.model;
 
 import com.fish.drawme.server.db.MongoDB;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.rmi.NoSuchObjectException;
@@ -30,6 +31,7 @@ public class CanvasHandler {
         JSONObject jsonObject = new JSONObject();
         String canvasID = db.getNextID();
         jsonObject.put("canvasID", canvasID);
+        jsonObject.put("figures", new JSONArray().toString()); //??
         Canvas canvas = new Canvas(jsonObject);
         canvasIDToCanvas.put(canvasID, canvas);
         db.saveCanvas(jsonObject);

@@ -3,8 +3,7 @@ package com.fish.drawme.server.model;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-
-import java.util.Iterator;
+import org.json.simple.parser.JSONParser;
 
 
 public class Canvas {
@@ -15,12 +14,18 @@ public class Canvas {
 
     public Canvas(JSONObject canvas){
         canvasID = (String)canvas.get("canvasID");
-        figures = new JSONArray();
+        JSONParser parser = new JSONParser();
+        try {
+            figures = (JSONArray) parser.parse(canvas.get("figures").toString());
+        }catch (Exception e){
+           figures = new JSONArray();
+        }
     }
     public JSONObject toJSON(){
         JSONObject obj = new JSONObject();
         obj.put("canvasID", canvasID);
         obj.put("figures", figures);
+
         return obj;
     }
     public void addFigure(JSONObject figure){
