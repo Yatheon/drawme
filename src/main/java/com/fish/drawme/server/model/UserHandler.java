@@ -26,7 +26,7 @@ public class UserHandler {
      * @return JSONObject with user token and canvas object
      * @throws NoSuchObjectException will throw exception if no canvas with provided ID exists
      */
-    public synchronized JSONObject createUser(Client client, String canvasID){
+    public synchronized String createUser(Client client, String canvasID){
 
             Map<String, User> users = canvasIDToUsers.get(canvasID);
             String clientID = UUID.randomUUID().toString();
@@ -41,9 +41,7 @@ public class UserHandler {
                 System.out.println("User: "+dick.getKey());
             }
 
-            JSONObject joinCanvas = new JSONObject();
-            joinCanvas.put("clientID", clientID);
-            return joinCanvas;
+            return clientID;
 
 
     }
