@@ -15,9 +15,8 @@ public class UserHandler {
     private final Map<String, String> userToCanvasID = Collections.synchronizedMap(new HashMap<>());
     private final Map<String, Map<String, User>> canvasIDToUsers = Collections.synchronizedMap(new HashMap<>());
 
-    private CanvasHandler canvasHandler;
-    public UserHandler(CanvasHandler canvasHandler){
-        this.canvasHandler = canvasHandler;
+
+    public UserHandler(){
     }
 
     /**
@@ -27,19 +26,14 @@ public class UserHandler {
      * @return JSONObject with user token and canvas object
      * @throws NoSuchObjectException will throw exception if no canvas with provided ID exists
      */
-    public synchronized JSONObject joinCanvas(Client client, String canvasID)throws NoSuchObjectException{
-            Canvas canvas = canvasHandler.getCanvas(canvasID);
-            if(canvas==null){
-                System.out.println("HALELULJA");
-                return null;
-            }
+    public synchronized JSONObject createUser(Client client, String canvasID){
+
             Map<String, User> users = canvasIDToUsers.get(canvasID);
             String clientID = UUID.randomUUID().toString();
             userToCanvasID.put(clientID, canvasID);
 
             User user = new User(client);
             users.put(clientID, user);
-
             canvasIDToUsers.put(canvasID, users);
 
             System.out.println("Canvas "+canvasID+" has been joined by User: "+clientID);
@@ -49,16 +43,12 @@ public class UserHandler {
 
             JSONObject joinCanvas = new JSONObject();
             joinCanvas.put("clientID", clientID);
-            joinCanvas.put("canvas", canvas.toJSON());
             return joinCanvas;
 
 
     }
-    public JSONObject newCanvas(Client client){
-        Canvas canvas = canvasHandler.newCanvas();
+    public JSONObject newCanvas(Client client, String canvasID){
         Map<String, User> users = new HashMap<>();
-        String canvasID = canvas.getCanvasID();
-
         String clientID = UUID.randomUUID().toString();
         userToCanvasID.put(clientID, canvasID);
 
@@ -67,27 +57,29 @@ public class UserHandler {
 
         canvasIDToUsers.put(canvasID, users);
         System.out.println("Canvas created, Canvas ID: "+canvasID+", by User: "+clientID);
-            JSONObject joinCanvas = new JSONObject();
+        JSONObject joinCanvas = new JSONObject();
         joinCanvas.put("clientID", clientID);
         joinCanvas.put("canvasID", canvasID);
         return joinCanvas;
     }
-    public synchronized void disconnect(String token){
+    public synchronized String disconnect(String token){
         String canvasID = userToCanvasID.remove(token);
-        canvasHandler.saveCanvas(canvasID);
+
         Map<String, User> users = canvasIDToUsers.get(canvasID);
         users.remove(token);
         System.out.println("Disconnection on Canvas "+canvasID+" with User "+token);
-        if(users.isEmpty()){
-            canvasHandler.forget(canvasID);
-        }
+
         canvasIDToUsers.put(canvasID,users);
+        return canvasID;
     }
-    public void draw(String token, JSONObject figure){
-        broadcastFigure(token, figure);
-        canvasHandler.addFigure(userToCanvasID.get(token), figure);
+    public boolean canvasIsEmpty(String canvasID){
+        Map<String, User> users = canvasIDToUsers.get(canvasID);
+       return users.isEmpty();
     }
-    private void broadcastFigure(String clientID, JSONObject figure){
+    public String getCanvasID(String token){
+        return userToCanvasID.get(token);
+    }
+    public void broadcastFigure(String clientID, JSONObject figure){
         Map<String, User> users = canvasIDToUsers.get(userToCanvasID.get(clientID));
         for(Map.Entry<String, User> user : users.entrySet()){
             try {

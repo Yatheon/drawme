@@ -17,7 +17,7 @@ public class Main {
     public static void main(String[] args) {
         try{
             new Main().startRegistry();
-            Naming.rebind(SERVER_NAME_IN_REGISTRY, new Controller(new UserHandler(new CanvasHandler(new MongoDB("drawDB")))));
+            Naming.rebind(SERVER_NAME_IN_REGISTRY, new Controller(new UserHandler(), new CanvasHandler(new MongoDB("drawDB"))));
         }catch (Exception e){
             e.printStackTrace();
         }
